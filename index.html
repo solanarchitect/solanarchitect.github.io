@@ -87,6 +87,29 @@
 				border-color: crimson;
 				color: white;
 			}
+		
+			#centeredSquareTextBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;  /* Adjust for desired square size */
+    height: 200px; /* Should be the same as width to make it square */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0em; /* Adjust for text size */
+    color: green; /* Text color */
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+#centeredSquareTextBox p {
+    margin: 0;
+}
+		
+		
 		</style>
 	</head>
 	<body>
@@ -105,5 +128,10 @@
 			For more information, please visit: https://github.com/Rezmason/matrix
 		 -->
 		<script type="module" src="js/main.js"></script>
+
+		<div id="centeredSquareTextBox">
+			<p> Bond the key. Open the door. </p>
+		</div>
+
 	</body>
 </html>
