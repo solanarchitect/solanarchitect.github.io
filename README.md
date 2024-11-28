@@ -1,2 +1,2 @@
-[![Matrix screenshot](/screenshot.png?raw=true "Matrix's default appearance.")](https://solanarchitect.github.io/)
+[![Matrix screenshot](/screenshot.png?raw=true "Matrix's default appearance.")](https://thecorrectdoor.com)
 
