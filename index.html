@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="shortcut icon" href="chair.ico" type="image/x-icon">
-		<title>I am the Architect.</title>
+		<title>I am the Architect</title>
 		<meta charset="utf-8" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -91,7 +91,7 @@
 		
 			
 	#centeredSquareTextBox {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -105,11 +105,26 @@
     font-size: 1.0em; /* Adjust for text size */
     color: green; /* Text color */
     z-index: 1; /* Ensure it's above other elements if needed */
-    position: fixed !important 			
+		
 }
 
-#centeredSquareTextBox p {
-    margin: 0;
+#centeredSquareTextBox #clickableButton {
+    /* Button styling */
+    background-color: rgba(76, 175, 80, 0.7); /* Green */
+    border: none;
+    transform: translate();
+	color: rgb(255, 255, 255);
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.0em;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#centeredSquareTextBox #clickableButton:hover {
+    background-color: rgba(69, 160, 73, 0.8); /* Darker green on hover */
 }
 		
 		
@@ -133,8 +148,22 @@
 		<script type="module" src="js/main.js"></script>
 
 		<div id="centeredSquareTextBox">
-			<p> Bond the key. Open the door. </p>
+			<button id="clickableButton">ENTER</button>		
 		</div>
+
+<script>document.getElementById('clickableButton').addEventListener('click', function() {
+    // Check the current text of the button
+    if (this.textContent === 'ENTER') {
+        
+        this.textContent = 'Bond the key. Open the door.';
+        // Optionally, you can add another action here
+    } else {
+        // If it says anything else, revert it back to "Click Me"
+        this.textContent = 'ENTER';
+        // Optionally, reverse any other action you might have performed
+		   }
+});</script>
+
 
 	</body>
 </html>
